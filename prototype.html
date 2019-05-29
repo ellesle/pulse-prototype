@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='icon' href='favicon.ico' type='image/x-icon'/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i&display=swap" rel="stylesheet">
+    <title>Pulse</title>
+  </head>
+  <body>
+    <div class="container-fluid search-bar">
+      <div id="search">
+        <img src="assets/search-icon.svg"/>
+        <input type="text" id="search-input"></span>
+      </div>
+    </div>
+    <!-- Sidebar -->
+    <div class="sidenav">
+      <a href="#"><img src="assets/pulse-logo.svg" alt="Pulse logo"/></a>
+      <a href="#"><img src="assets/home-icon.svg" alt="Home"/></a>
+      <a href="#"><img src="assets/map-icon.svg" alt="Map"/></a>
+      <a href="#"><img src="assets/favourites-icon.svg" alt="Favourites"/></a>
+      <a href="#"><img src="assets/account-icon.svg" alt="Account"/></a>
+    </div>
+    <!-- End Sidebar -->
+      <div class="container">
+        <div class="row"> <!-- Breadcrumbs -->
+          <div class="col-lg-12">
+          <!-- Breadcrumbs -->
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">2000</a></li>
+              <li class="breadcrumb-item active" aria-current="page">3 Elizabeth Street, Sydney NSW 2000</li>
+            </ol>
+          </nav>
+          <!-- end breadcrumbs -->
+          </div>
+        </div>
+        <div class="row"> <!-- Heading -->
+          <div class="col-lg-7">
+            <h3>3 Elizabeth Street, Sydney NSW 2000</h3>
+          </div>
+          <div class="col-lg-5">
+            <button type="button" class="btn btn-primary float-right">Export <img src="assets/export-icon.svg" alt="Date"/></button>
+            <button type="button" class="btn btn-primary float-right"><img src="assets/calendar-icon.svg" alt="Date"/></button>
+          </div>
+        </div>
+        <div class="row"> <!-- Consumption History -->
+          <div class="col-lg-8 card">
+            <h3 class="card-name">CONSUMPTION HISTORY</h3>
+            <div class="card-inner">
+              <div>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-secondary" id="button-toggle">ALL</button>
+                  <button type="button" class="btn btn-secondary">ELECTRICITY</button>
+                  <button type="button" class="btn btn-secondary" id="button-toggle">GAS</button>
+                  <button type="button" class="btn btn-secondary" id="button-toggle">WATER</button>
+                </div>
+                <!-- dropdown -->
+                <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" id="date-dropdown" type="button" data-toggle="dropdown">Last 3 months
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Last 24 hours</a></li>
+                    <li><a href="#">Last week</a></li>
+                    <li><a href="#">Last year</a></li>
+                  </ul>
+                </div>
+                <!-- end drop down -->
+              </div>
+              <img id="consumption-graph" src="assets/graph-consumption.png" alt="Consumption History"/>
+              <div id="small-text">Note: This is not a real graph.</div>
+            </div>
+          </div>
+          <div class="col-lg-4 card">
+            <h3 class="card-name">ENERGY BREAKDOWN</h3>
+            <div class="card-inner">
+              <!-- dropdown -->
+              <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" id="date-dropdown" type="button" data-toggle="dropdown">Last 3 months
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Last 24 hours</a></li>
+                  <li><a href="#">Last week</a></li>
+                  <li><a href="#">Last year</a></li>
+                </ul>
+              </div>
+              <!-- end drop down -->
+              <img id="consumption-graph" src="assets/donut-breakdown.png" alt="Energy Breakdown"/>
+              <div id="small-text">Note: This is not a real graph.</div>
+            </div>
+          </div>
+        </div>
+        <div class="row"> <!-- Usage statistics -->
+          <div class="col-lg-4 card">
+            <h3 class="card-name">ELECTRICITY</h3>
+            <div class="card-inner">
+              <div class="row"> <!-- Usage statistics: ELECTRICITY -->
+                <div class="col-lg-6">
+                  Usage this period<br>
+                  <span class="card-details"><span class="large-stat">953</span> kWh</span>
+                  <br>
+                  <span class="negative-text">▲ 5.4%</span>
+                </div>
+                <div class="col-lg-6">
+                  <div class="card-right">
+                    Avg. daily usage<br>
+                    <span class="card-details"><span class="small-stat">10.75</span> kWh</span>
+                    <br>
+                    Same time last year<br>
+                    <span class="card-details"><span class="small-stat">1007</span> kWh</span>
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="small-text">
+              <img src="assets/household-icon.svg"/> Currently using <span class="negative-text">2 times</span> the average household.
+            </div>          </div>
+          <div class="col-lg-4 card">
+            <h3 class="card-name">WATER</h3>
+            <div class="card-inner">
+              <div class="row"> <!-- Usage statistics: WATER -->
+                <div class="col-lg-6">
+                  Usage this period <br>
+                  <span class="card-details"><span class="large-stat">35.4</span> kL</span>
+                  <br>
+                  <span class="positive-text">▼ 2.3%</span>
+                </div>
+                <div class="col-lg-6">
+                  <div class="card-right">
+                    Avg. daily usage<br>
+                    <span class="card-details"><span class="small-stat">319</span> L</span>
+                    <br>
+                    Same time last year<br>
+                    <span class="card-details"><span class="small-stat">32.6</span> kL</span>
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="small-text">
+              <img src="assets/household-icon.svg"/> Currently using <span class="positive-text">0.3 times</span> the average household.
+            </div>
+            </div>
+          </div>
+          <div class="col-lg-4 card">
+            <h3 class="card-name">GAS</h3>
+            <div class="card-inner">
+              <div class="row">
+                <div class="col-lg-6">
+                  Usage this period <br>
+                  <span class="card-details"><span class="large-stat">4823</span> MJ</span>
+                  <br>
+                  <span class="positive-text">▼ 1.4%</span>
+                </div>
+                <div class="col-lg-6">
+                  <div class="card-right">
+                    Avg. daily usage<br>
+                    <span class="card-details"><span class="small-stat">319</span> MJ</span>
+                    <br>
+                    Same time last year<br>
+                    <span class="card-details"><span class="small-stat">4782</span> MJ</span>
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="small-text">
+              <img src="assets/household-icon.svg"/> Currently using <span class="positive-text">0.7 times</span> the average household.
+            </div>            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
